@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试function 页面</title>
+
+    <script>
+        var bean = {
+            name: "你好", age: 10,
+            myMethod: function myMethod(value) {
+                return value + "_aa";
+            }
+        }
+
+        function test() {
+            var m = bean["myMethod"];
+            console.log(m);
+            var msg;
+            if (typeof (m) == "function") {
+                msg = "m 是一个Function 对象"
+            } else {
+                msg = "m 不是一个Function 对象"
+            }
+            alert(msg);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>这是一个判断function功能的页面</h1>
+    <span onclick="test()">打印对象的myMethod变量</span>
+</body>
+
+</html>
