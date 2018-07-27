@@ -10,6 +10,7 @@
     <script>
         var bean = {
             name: "你好", age: 10,
+            height: null,
             myMethod: function myMethod(value) {
                 return value + "_aa";
             }
@@ -17,6 +18,9 @@
 
         function test() {
             var m = bean["myMethod"];
+            var e = bean["ee"];
+            console.log(e);
+            console.log(bean.height);
             console.log(m);
             var msg;
             if (typeof (m) == "function") {
