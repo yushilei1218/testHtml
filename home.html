@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>我的练习</title>
 
     <script>
-    function click(){
-        console.log("点击了click");
-    }
+        var index = 0;
+
+        function test() {
+            console.log("点击了click");
+        }
+        function add() {
+            var myUl = document.getElementById("my_list");
+            var child = document.createElement("li");
+            index++;
+            child.innerHTML = "添加的第 " + index + " 元素";
+            myUl.appendChild(child);
+        }
     </script>
+    <style>
+        /* 类 */
+
+        li {
+            background-color: aqua;
+        }
+
+        /* id */
+
+        #a {
+            background-color: aqua;
+        }
+
+        .temp {
+
+            background-color: blue;
+        }
+    </style>
 
 </head>
-<body>
-    <h1>这个是一个练习Html的首页</h1>
-    <br>
-    <ul>
-        <li >列表第一个元素</li>
-        <li >列表第二个元素</li>
-    </ul>
 
+<body>
+    <h1 id="a">这个是一个练习Html的首页</h1>
+    <br>
+    <ul id="my_list">
+        <li>列表第一个元素</li>
+        <li>列表第二个元素</li>
+    </ul>
+    <span onclick="add()">添加li元素</span>
+
+
+    <a style="display: block" href="http://wwww.baidu.com" target="_blank">百度链接</a>
+
+    <div style="height: 600px;"></div>
+
+    <a href="#a">跳转到顶部</a>
 
 </body>
+
 </html>
